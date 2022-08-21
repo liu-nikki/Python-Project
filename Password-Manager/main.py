@@ -28,7 +28,7 @@ def save():
     else:
         is_ok = messagebox.askokcancel(title=website, message="Is it ok to save?")
         if is_ok:
-            file = open("password-manager-start/data.txt", "a")
+            file = open("Password-Manager/data.txt", "a")
             file.write(f"{website} | {email} | {password}\n")
             website_entry.delete(0,END)
             password_entry.delete(0,END)
@@ -38,7 +38,7 @@ window.title("Password Manager")
 window.config(padx=20, pady=20)
 
 canvas = Canvas(width=200, height=200)
-img = PhotoImage(file="password-manager-start/logo.png")
+img = PhotoImage(file="Password-Manager/logo.png")
 canvas.create_image(100, 100, image = img)
 canvas.grid(column=1, row=0)
 
